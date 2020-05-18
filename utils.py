@@ -5,5 +5,5 @@ def crop_image(img):
 def normalize(img):
     min_pixel = np.amin(img)
     max_pixel = np.amax(img)
-    norm_img = img - min_pixel * 1 / (max_pixel - min_pixel)
+    norm_img = (img - min_pixel) * (1 / (max_pixel - min_pixel))
     return norm_img
